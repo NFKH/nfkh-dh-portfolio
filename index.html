@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N.FKH | Digital Humanities Portfolio</title>
+
+  
+  <style>
+    :root {
+      --bg: #f5efe6;
+      --card: #fffaf2;
+      --ink: #2b2522;
+      --muted: #6f625a;
+      --accent: #8b2f3c;
+      --accent-soft: #ead2d6;
+      --gold: #b88b4a;
+      --border: #dfd2c2;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      margin: 0;
+      line-height: 1.7;
+      color: var(--ink);
+      background:
+        linear-gradient(rgba(245, 239, 230, 0.95), rgba(245, 239, 230, 0.95)),
+        url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+    }
+
+    header {
+      padding: 70px 20px 60px;
+      text-align: center;
+      background: linear-gradient(135deg, #fffaf2, #ead2d6);
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      margin: 0 0 12px;
+      font-size: 2.7rem;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+    }
+
+    header .subtitle {
+      max-width: 780px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      color: var(--muted);
+    }
+
+    .keywords {
+      margin-top: 24px;
+    }
+
+    .keywords span {
+      display: inline-block;
+      margin: 5px;
+      padding: 6px 12px;
+      border: 1px solid var(--gold);
+      border-radius: 20px;
+      background-color: rgba(255, 250, 242, 0.75);
+      color: var(--ink);
+      font-size: 0.88rem;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      text-align: center;
+      padding: 14px;
+      background-color: var(--ink);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    }
+
+    nav a {
+      color: #fffaf2;
+      text-decoration: none;
+      margin: 0 14px;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    main {
+      max-width: 980px;
+      margin: 45px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background-color: var(--card);
+      padding: 34px;
+      margin-bottom: 28px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 20px rgba(80, 60, 40, 0.07);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent-soft);
+      padding-bottom: 8px;
+      font-size: 1.6rem;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      color: var(--ink);
+      font-size: 1.25rem;
+    }
+
+    .project {
+      padding: 24px;
+      margin-bottom: 24px;
+      border-left: 5px solid var(--accent);
+      background-color: #fffdf8;
+      border-radius: 12px;
+    }
+
+    .project-title {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #fffaf2;
+      padding: 10px 16px;
+      border-radius: 24px;
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 10px rgba(80, 40, 40, 0.15);
+    }
+
+    .project-title::before {
+      content: "◆ ";
+      color: var(--gold);
+    }
+
+    .project-title:hover {
+      background-color: #6f2430;
+    }
+
+    .project-meta {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .project-links {
+      margin-top: 14px;
+      font-size: 0.95rem;
+    }
+
+    .project-links a {
+      font-weight: bold;
+      text-decoration: none;
+      color: var(--accent);
+    }
+
+    .project-links a:hover {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+
+    .academic-context {
+      background-color: #f4e8d8;
+      border-left: 4px solid var(--gold);
+      padding: 12px 14px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .skills span {
+      display: inline-block;
+      background-color: var(--accent-soft);
+      color: var(--ink);
+      padding: 7px 12px;
+      margin: 5px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    .note {
+      padding: 18px;
+      border-radius: 12px;
+      background-color: #f4e8d8;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    a:hover {
+      color: var(--gold);
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 2.1rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px 8px;
+      }
+
+      section {
+        padding: 24px;
+      }
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Nazanin Fakharian</h1>
+    <p>
+      Digital Humanities researcher interested in archival data modeling,
+      digital scholarly editions, semantic technologies, and research interfaces.
+    </p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am a Master's student in Digital Humanities and Digital Knowledge at the
+        University of Bologna, with a background in English Literature. My work focuses
+        on the digital representation of historical and archival materials through
+        RDF/RiC-O, SPARQL, TEI/XML, IIIF, and digital research interfaces.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p class="note"> These projects reflect my development as a Digital Humanities researcher, with recurring interests in semantic modeling, cultural heritage data, digital scholarly editions, knowledge organization, and research-oriented interfaces. </p>
+
+      <div class="project">
+        <h3 class="project-title">ResearchSpace Interface for G. Albini Archive</h3>
+        <p class="project-meta">Current thesis-related project · RDF/RiC-O · SPARQL · ResearchSpace · Archival interface</p>
+        <p>
+          A Digital Humanities project focused on representing and navigating archival hierarchy
+          through RDF/RiC-O data and ResearchSpace. The work includes semantic tree navigation,
+          SPARQL query design, search logic, path-to-root behaviour, document preview, and image integration.
+        </p>
+        <p><strong>My contribution:</strong> SPARQL query testing, interface logic, archival hierarchy analysis,
+          document preview integration, and workflow documentation.</p>
+       
+        <p class="project-links">
+          <a href="https://bur.sba.unibo.it/chi-siamo/fondo-albini" target="_blank" rel="noopener noreferrer">View project fund</a>
+          ·
+        </p>
+
+        <p class="academic-context"> <strong>Academic context:</strong> Developed as part of the final thesis project work under the supervision of prof.<a href="https://www.unibo.it/sitoweb/francesca.tomasi/en" target="_blank" rel="noopener noreferrer">Francesca Tomasi</a>, University of Bologna. </p>
+
+      </div>
+
+      <div class="project">
+        <h3 class="project-title">Susan B. Anthony Diaries — Digital Scholarly Edition Prototype</h3>
+        <p class="project-meta">Individual project · TEI/XML · IIIF · Manuscript transcription · Digital edition</p>
+        <p>
+          A prototype digital scholarly edition of selected Susan B. Anthony diaries, focused on
+          TEI/XML modeling, manuscript image alignment, diary-page structure, and annotation planning.
+        </p>
+        <p><strong>My contribution:</strong> TEI/XML structure, diary-entry modeling, image-text alignment logic,
+          and edition design.</p>
+        <p class="project-links">
+          <a href="PROJECT-WEBSITE-LINK" target="_blank" rel="noopener noreferrer">View project</a>
+          ·
+          <a href="GITHUB-REPOSITORY-LINK" target="_blank" rel="noopener noreferrer">View repository</a>
+          ·
+        </p>
+
+        <p class="academic-context"> <strong>Academic context:</strong> Developed as part of the course <a href="COURSE-LINK" target="_blank" rel="noopener noreferrer">Digital Scholarly Editing: Theory, Methods and Practice (1) (LM)</a> in the Master's programme in Digital Humanities and Digital Knowledge, University of Bologna. </p>
+      </div>
+
+      <div class="project">
+        <h3 class="project-title">Abbas Kiarostami LOD Project</h3>
+        <p class="project-meta">Group project · Linked Open Data · Metadata alignment · RDF · Cultural heritage</p>
+        <p>
+          A Linked Open Data project dedicated to Abbas Kiarostami, developed through knowledge organization,
+          metadata analysis, metadata alignment, RDF production, and RDF visualization.
+        </p>
+        <p><strong>My contribution:</strong> Authority specification, data modeling, metadata alignment, RDF production, and documentation of modeling choices.</p>
+
+        <p class="project-links">
+          <a href="https://lod-kiarostami.github.io/AbbasKiarostami-LOD/" target="_blank">View project</a> ·
+          <a href="https://github.com/LOD-Kiarostami/AbbasKiarostami-LOD" target="_blank">View repository</a>
+        </p>
+
+        <p class="academic-context"> <strong>Academic context:</strong> Developed as part of the course <a href="https://www.unibo.it/en/study/course-units-transferable-skills-moocs/course-unit-catalogue/course-unit/2023/490899" target="_blank" rel="noopener noreferrer">Knowledge Organization in Libraries and Archives (1) (LM)</a> in the Master's programme in Digital Humanities and Digital Knowledge, University of Bologna. </p>
+      </div>
+
+      <div class="project">
+        <h3 class="project-title">FairTOlogy — Fairytale Ontology Project</h3>
+        <p class="project-meta">Group project · Ontology design · Perspectivisation · Narrative modeling</p>
+        <p>
+          An ontology project modeling fairy tales and adaptations across cultural and historical contexts.
+          The model includes character archetypes, moral themes, ending types, literary modes, and a
+          perspectivisation frame for comparing traditional tales with modern retellings.
+        </p>
+
+        <p><strong>My contribution:</strong> Ontology alignment, entity specification, taxonomy design, and conceptual documentation, narrative analysis, and RDF generation.</p>
+
+        <p class="project-links">
+          <a href="https://github.com/KRE-Fairytale/FairTOlogy" target="_blank">View repository</a>
+        </p>
+
+        <p class="academic-context"> <strong>Academic context:</strong> Developed as part of the course <a href="https://www.unibo.it/en/study/course-units-transferable-skills-moocs/course-unit-catalogue/course-unit/2023/490896" target="_blank" rel="noopener noreferrer">Knowledge Representation and Extraction (1) (LM)</a> in the Master's programme in Digital Humanities and Digital Knowledge, University of Bologna. </p>
+
+      </div>
+
+      <div class="project">
+        <h3 class="project-title">Cash & Culture — Who Gets Funded, Who Gets Visited</h3>
+        <p class="project-meta">Group project · Information visualization · Cultural heritage data · Python</p>
+        <p>
+          A cultural heritage data visualization project exploring the relationship between public funding,
+          visitor demand, regional cultural participation, and infrastructure across Italian regions.
+        </p>
+        <p><strong>My contribution:</strong> Data visualization, visual storytelling, interpretation of cultural heritage data, and communication of analytical findings through an accessible web presentation. </p>
+        <p class="project-links">
+          <a href="https://infoviz-italianheritage.github.io/CashAndCulture/" target="_blank">View project</a> ·
+          <a href="https://github.com/InfoViz-ItalianHeritage/CashAndCulture" target="_blank">View repository</a>
+        </p>
+
+        <p class="academic-context"> <strong>Academic context:</strong> Developed as part of the course <a href="https://www.unibo.it/en/study/course-units-transferable-skills-moocs/course-unit-catalogue/course-unit/2024/467047" target="_blank" rel="noopener noreferrer">	Information Visualization (1) (LM)</a> in the Master's programme in Digital Humanities and Digital Knowledge, University of Bologna. </p>
+
+      </div>
+
+      <div class="project">
+        <h3 class="project-title">The Elizabeth Gaskell Journal — Digital Edition Review</h3>
+        <p class="project-meta">Individual review · Scholarly digital edition · TEI/XML · IIIF · Usability</p>
+        <p>
+          A review of a scholarly digital edition, focusing on editorial method, user interface,
+          usability, textual criticism, technological infrastructure, TEI/XML, IIIF, and digital edition principles.
+        </p>
+        <p><strong>My contribution:</strong> Independent critical review and evaluation of the edition.</p>
+        <p class="project-links">
+          <a href="https://nfkh.github.io/SEDT-REVIEW-GASKELL/" target="_blank">View review</a>
+        </p>
+
+        <p class="academic-context"> <strong>Academic context:</strong> Developed as part of the course <a href="https://www.unibo.it/en/study/course-units-transferable-skills-moocs/course-unit-catalogue/course-unit/2023/478841" target="_blank" rel="noopener noreferrer">	Scholarly Editing and Digital Textuality (1) (LM)</a> in the Master's programme in Digital Humanities and Digital Knowledge, University of Bologna. </p>
+        
+      </div>
+
+      <div class="project">
+        <h3 class="project-title">on.fOOt.clues — Interactive Cultural Tourism Prototype</h3>
+        <p class="project-meta">Group project · Interactive storytelling · Cultural tourism · Bologna</p>
+        <p>
+          An interactive cultural tourism prototype designed as a treasure-hunt experience in Bologna.
+          The project combines narrative, location-based exploration, challenges, visual media, and heritage interpretation.
+        </p>
+        <p><strong>My contribution:</strong> Developed as a collaborative group project, with shared work on concept development, storytelling, cultural research, content design, user experience, and final web presentation.</p>
+        <p class="project-links">
+          <a href="https://mediacrafters.github.io/IMD-MC2024/" target="_blank">View project</a>
+        </p>
+
+        <p class="academic-context"> <strong>Academic context:</strong> Developed as part of the course <a href="https://www.unibo.it/en/study/course-units-transferable-skills-moocs/course-unit-catalogue?codiceMateria=92985&annoAccademico=2023&codiceCorso=9224&single=True&search=True" target="_blank" rel="noopener noreferrer">Digital Heritage and Multimedia (I.C.) (LM)</a> in the Master's programme in Digital Humanities and Digital Knowledge, University of Bologna. </p>
+
+      </div>
+
+    </section>
+
+
+    <section id="skills">
+      <h2>Skills</h2>
+
+      <div class="skills">
+        <span>Digital Humanities</span>
+        <span>RDF</span>
+        <span>RiC-O</span>
+        <span>SPARQL</span>
+        <span>Knowledge Graphs</span>
+        <span>ResearchSpace</span>
+        <span>TEI/XML</span>
+        <span>IIIF</span>
+        <span>Python</span>
+        <span>Jupyter</span>
+        <span>Git</span>
+        <span>HTML/CSS</span>
+        <span>Django Basics</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:nazanin.fakharian@gmail.com">nazanin.fakharian@gmail.com</a>
+      </p>
+      <p>
+        GitHub: <a href="https://github.com/Theengwar">/Theengwar</a>
+      </p>
+      <p>
+        LinkedIn: <a href="https://www.linkedin.com/in/nazanin-fakharian">/nazanin-fakharian</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Nazanin Fakharian</p>
+  </footer>
+
+</body>
+</html>
+
